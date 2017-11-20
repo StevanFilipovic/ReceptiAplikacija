@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +7,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent implements OnInit {
+
+ @Output() featuredSelected = new EventEmitter<string>();
+
+  onSelect(feature: string) {
+    this.featuredSelected.emit(feature);
+  }
 
   constructor() { }
 
