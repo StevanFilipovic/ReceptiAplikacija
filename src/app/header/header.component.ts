@@ -4,7 +4,7 @@ import {Component, EventEmitter, OnInit, Output, ViewEncapsulation} from '@angul
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent implements OnInit {
 
